@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AddToBag from "./AddtoBag";
+import LoginContextProvider from "./context/LoginSignOut";
+import Header from "./Header";
+import "./index.css";
+import Joggers from "./Joggers";
+import Login from "./Login";
+import Popular from "./Popular";
+import ProductDetails from "./ProductDetails";
+import SignUp from "./Signup";
+import Slider from "./Slider";
+import WishList from "./Wishlist";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <LoginContextProvider>
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Slider />
+              <Popular />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/signup">
+              <SignUp />
+            </Route>
+            <Route exact path="/joggers">
+              <Joggers />
+            </Route>
+            <Route exact path="/wishlist">
+              <WishList />
+            </Route>
+            <Route exact path="/product/:id">
+              <ProductDetails />
+            </Route>
+            <Route exact path="/addtobag">
+              <AddToBag />
+            </Route>
+          </Switch>
+        </div>
+      </LoginContextProvider>
+    </Router>
   );
 }
 

@@ -1,0 +1,63 @@
+[
+  {  
+    "id":1,
+    "imgUrl": "https://images.bewakoof.com/uploads/grid/app/Winterwear-Men-3x3-homepage-grid-new-1645686265.jpg",
+    "name": "CHECK PRINT SHIRT",
+    "price": "asdas"
+  },
+  {
+    "id":2,
+    "imgUrl": "https://images.bewakoof.com/uploads/grid/app/Joggers-men-1644388220.jpg",
+    "name": "GLORIA HIGH LOGO SNEAKER",
+    "price": 91
+  },
+  {
+    "id":3,
+    "imgUrl":"https://images.bewakoof.com/uploads/grid/app/Full-Sleeves-Tshirts-men-1644388219.jpg",
+    "name": "CATE RIGID BAG",
+    "price": 94.5
+  },
+  {
+    "id":4,
+    "imgUrl": "https://images.bewakoof.com/uploads/grid/app/Winterwear-Men-3x3-homepage-grid-new-1645686265.jpg",
+    "name": "CHECK PRINT SHIRT",
+    "price": "asdas"
+  },
+  {
+    "id":5,
+    "imgUrl": "https://images.bewakoof.com/uploads/grid/app/Joggers-men-1644388220.jpg",
+    "name": "GLORIA HIGH LOGO SNEAKER",
+    "price": 91
+  },
+  { 
+    "id":6,
+    "imgUrl":"https://images.bewakoof.com/uploads/grid/app/Full-Sleeves-Tshirts-men-1644388219.jpg",
+    "name": "CATE RIGID BAG",
+    "price": 94.5
+  },
+  {
+    "id":7,
+    "imgUrl": "https://images.bewakoof.com/uploads/grid/app/Winterwear-Men-3x3-homepage-grid-new-1645686265.jpg",
+    "name": "CHECK PRINT SHIRT",
+    "price": "asdas"
+  },
+  {
+    "id":8,
+    "imgUrl": "https://images.bewakoof.com/uploads/grid/app/Joggers-men-1644388220.jpg",
+    "name": "GLORIA HIGH LOGO SNEAKER",
+    "price": 91
+  },
+  {
+    "id":9,
+    "imgUrl":"https://images.bewakoof.com/uploads/grid/app/Full-Sleeves-Tshirts-men-1644388219.jpg",
+    "name": "CATE RIGID BAG",
+    "price": 94.5
+  },
+  {
+    "id":10,
+    "imgUrl": "https://images.bewakoof.com/uploads/grid/app/Winterwear-Men-3x3-homepage-grid-new-1645686265.jpg",
+    "name": "CHECK PRINT SHIRT",
+    "price": 10
+  }
+  
+]
