@@ -2,7 +2,28 @@
   font-family: "Montserrat", sans-serif;
   /* color: #000; */
 }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar:hover{
+  width: 8px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:#42A2A2; 
+  border-radius: 7px;
+}
 .main-header {
   display: flex;
   flex-direction: row;
@@ -42,6 +63,15 @@
 .header-login h4 {
   font-size: 1rem;
 }
+.fisearch{
+  width: 22px;
+  height: 20px;
+}
+.faheart,.facart{
+  width: 32px;
+  height: 32px;
+}
+
 .search,
 .header-login,
 .header-whishlist,
@@ -79,6 +109,47 @@
   background: #eaeaea;
   border: 1px solid transparent;
   color: rgba(0, 0, 0, 0.5);
+}
+.searchbar{
+  visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 67px;
+    z-index: 1000;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbar input{
+  box-sizing: border-box;
+  display: block;
+  padding: 6px 10px;
+  padding-inline-start: 30px;
+  height: 42px;
+  border-radius: 4px;
+  font-size: 16px;
+  box-shadow: none;
+  background: #eaeaea;
+  border: 1px solid transparent;
+  color: rgba(0, 0, 0, 0.8);
+  width: 96%;
+}
+.fisearchbar{
+  position: absolute;
+  left: 16px ;
+  width: 22px;
+  height: 22px;
+  color: #000;
+}
+.ficlose{
+  position: absolute;
+  right: 16px ;
+  width: 22px;
+  height: 22px;
+  color: #000;
 }
 .signUp-form {
   display: flex;
@@ -161,7 +232,7 @@
   border-right: none;
 }
 .popular-list span {
-  color: rgb(224, 224, 26);
+  color: #fdd835;
   font-size: 2rem;
   text-align: center;
   align-items: center;
@@ -172,18 +243,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
-.lists,
+.jog-lists,.lists,
 .wishlist {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.lists a {
+.jog-lists a,.lists a {
   text-decoration: none;
 }
 .lists img,
-.wishlist img {
+.wishlist img ,.jog-lists img{
   width: 250px;
   height: 300px;
   margin: 0.5rem;
@@ -191,7 +262,7 @@
 .lists h3,
 .lists b,
 .wishlist h3,
-.wishlist b {
+.wishlist b ,.jog-lists h3,.jog-lists b{
   font-size: 12px;
   font-family: "montserrat", sans-serif;
   color: #2d2d2d;
@@ -216,7 +287,7 @@
   text-align: left;
   color: rgba(0, 0, 0, 0.8);
 }
-.lists i {
+.jog-lists i {
   background-color: hsla(0, 0%, 100%, 0.7);
   width: 40px;
   height: 40px;
@@ -225,7 +296,7 @@
   cursor: pointer;
   position: absolute;
   margin-left: 190px;
-  margin-bottom: 280px;
+  margin-bottom: 275px;
   color: #2d2d2d;
 }
 .wishlist i {
@@ -281,7 +352,8 @@
   margin-top: 110px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .left-side img {
   align-items: center;
@@ -357,6 +429,7 @@
   border-radius: 5px;
   font-size: 16px;
 }
+
 .cart-items span {
   font-size: 16px;
   color: #333333;
@@ -364,14 +437,15 @@
 .cart-items h4 {
   margin-top: 110px;
   margin-left: 10px;
-  margin-bottom: 20px;
   font-size: 18px;
   font-family: "montserrat-bold", sans-serif;
   text-align: left;
+  justify-content: space-around;
 }
 .bag-itemsandprice {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 .bagitems {
   display: grid;
@@ -457,7 +531,6 @@
 .bagpricegrid{
   display: flex;
   flex-direction: column;
-  width: 38%;
 }
 .bagprice ,.totalbutton{
   display: flex;
@@ -543,6 +616,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .modalContainer {
   width: 740px;
   height: max-content;
@@ -552,6 +626,7 @@
   transform: translate(-50%, -50%);
   margin: 0px auto;
   background: rgb(255, 255, 255);
+  margin-top: 24px;
 }
 .title h5 {
   font-size: 20px;
@@ -587,27 +662,46 @@
     display: block;
     margin-bottom: 1.5rem;
 }
+.address-form label{
+  padding: 0 3px;
+  font-size: 14px;
+  color: #000;
+  position: absolute;
+  max-width: 100%;
+  font-weight: 700;
+  background: white;
+}
 .name-label{
-    padding: 0 3px;
-    font-size: 14px;
-    color: #000;
-    position: absolute;
-    max-width: 100%;
-    font-weight: 700;
     top: 87px;
     right: 600px;
-    background: white;
 }
 .number-label{
-    padding: 0 3px;
-    font-size: 14px;
-    color: #000;
-    position: absolute;
-    max-width: 100%;
-    font-weight: 700;
     top: 157px;
     right: 566px;
-    background: white; 
+}
+.pincode-label{
+  top: 269px;
+  right: 613px;
+}
+.city-label{
+  top: 340px;
+  right: 640px;
+}
+.state-label{
+  top: 340px;
+  right: 312px;
+}
+.flat-label{
+  right: 478px;
+  bottom: 277px;
+}
+.area-label{
+  bottom: 204px;
+  right: 579px;
+}
+.landmark-label{
+  bottom: 132px;
+  right: 548px;
 }
 .display-border{
   border: 0.5px solid rgba(0,0,0,.3);
@@ -626,7 +720,7 @@
 
 }
 
-.modalContainer .footer button {
+.footer button {
   background-color: #42a2a2;
     border: 1px solid #42a2a2;
     border-radius: 5px;
@@ -646,4 +740,178 @@
 }
 .state-input{
   margin-right: 2px;
+}
+@media only screen and (max-width: 600px) {
+  .main-header{
+    height: 66px;
+    justify-content: space-evenly;
+  }
+  .main-header-left{
+    margin-right: 0.25rem;
+    margin-left: 0.75rem;
+  }
+  .main-header-left img{
+    height: 18px;
+  }
+  .main-header-right{
+    margin-left: 4.5rem;
+  }
+  .faheart,.facart{
+    width: 22px;
+    height: 22px;
+  }
+  .header-addtocart span {
+    top: 13px;
+    right: 10px;
+    height: 15px;
+    width: 15px;
+    font-size: 14px
+}
+  .header-login h4{
+    font-size: 12px;
+    color: #000;
+  }
+  .search, .header-login, .header-whishlist, .header-addtocart {
+    margin-left: 2px;
+    padding: 3px;
+
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 80px;
+}
+.left-side img {
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  margin-top: 1rem;
+  width: 230px;
+}
+.right-side{
+  margin: 1rem;
+    width: 270px;
+}
+
+.right-side p {
+  font-size: 18px;
+  font-family: "montserrat", sans-serif;
+  width: 250px;
+}
+.mens-joggers h1,.mens-joggers h2{
+  font-size: 18px;
+  text-align:center;
+}
+.products{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.joggers{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.bag-itemsandprice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.bagitems{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.tbutton button{
+  width: 200px;
+}
+.signUp-form{
+  display: flex;
+    flex-direction: column;
+}
+.signup-form-left{
+  height: max-content;
+}
+.signUp-form h1{
+  font-size: 18px;
+    margin-top: 10px;
+}
+.signup-form-right{
+  margin: 0;
+}
+.signup-form-right button{
+  margin: 0.5rem;
+}
+.item img{
+  width: 370px;
+  margin-top:90px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+}
+.lists img{
+  width: 110px;
+  height: 145px;
+  margin: 0px;
+}
+.popular-list span,.popular-list h1{
+  font-size: 1rem;
+}
+.empty img{
+  height: 250px;
+}
+.modalContainer{
+  width: 330px;
+  margin-top: 96px;
+}
+.titleCloseBtn button{
+  padding-left: 165px;
+}
+.name-label{
+  right: 190px;
+}
+.number-label{
+  right: 156px;
+}
+.display-border{
+  width: 232px;
+}
+.pincode-label{
+  right: 200px;
+}
+.state-input{
+  display: flex;
+  flex-direction: column;
+}
+.city-label{
+  right: 228px;
+}
+.state-label{
+  top: 413px;
+  right: 220px;
+}
+.flat-label{
+  right: 65px;
+  bottom: 258px;
+}
+.area-label{
+    right: 170px;
+    bottom: 187px;
+}
+.landmark-label {
+  right: 138px;
+  bottom: 115px;
+}
+.footer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  width: 245px;
+}
+.footer button{
+  height: 30px;
+  font-size: 12px;
+  padding: 0px;
+}
 }

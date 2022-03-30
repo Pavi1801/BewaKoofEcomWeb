@@ -10,7 +10,7 @@ const Joggers = () => {
       <h1>Track Pants & Joggers for Men</h1>
       <div className="joggers">
         {data.map((data) => (
-          <div className="lists" key={data.id}>
+          <div className="jog-lists" key={data.id}>
               <i onClick={() => addToWishlist(data)} >
              {wishlist.find(wl=>wl.id==data.id)?
                 (<FaHeart  size={24} style={{marginTop:"10px"}} color="rgb(251, 210, 73)" />):
@@ -18,7 +18,7 @@ const Joggers = () => {
               <Link to={`/product/${data.id}`}> 
                         <img src={data.imgurl} alt="product-img"></img>
             <h3>{data.name}</h3>
-            <b>Price:{data.price}$</b>
+            <b>₹{data.price}</b>
             </Link>
           </div>
         ))}
